@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="dist/table.css">
+    <title>P L N</title>
+</head>
+<body>
+    <h1 class="font-sans text-3xl flex justify-center items-center p-10 bg-blue-300">PT. Once Sejahtera</h1>
+    <div class="flex flex-row">
+        <form class="flex-1 flex-col p-5" id="form_pelanggan">
+            <div class="form-control max-w-sm">
+                <label class="label">
+                    <span class="label-text">Nama Pelanggan</span>
+                  </label> 
+                <input type="text" placeholder="Nama Pelanggan" class="input input-primary" id="nama_pelanggan">
+                <label class="label">
+                    <span class="label-text">Kategory</span>
+                </label> 
+                <select id="selectCategory" class="select select-bordered select-primary w-full max-w-sm">
+                    <option disabled="disabled" selected="selected">Category</option> 
+                </select>
+                <label class="label">
+                    <span class="label-text">Jumlah Pemakaian</span>
+                  </label> 
+                <input type="text" placeholder="Jumlah Pemakaian" class="input input-primary" id="jumlah_pemakaian">
+            </div>
+            <div class="pt-5 w-20 flex flex-row">
+                <div class="pr-5">
+                    <input type="submit" value="Hitung" class="btn btn-primary pr-10 pl-10">
+                </div>
+                <button class="btn btn-warning pr-10 pl-10" onclick="window.location.reload();">Refresh</button>
+            </div>
+        </form>
+        <div class="flex-1" >
+            <p class="text-lg p-5">Result</p>
+            <table id="label-table" class="table"></table>
+            <table id="table_listrik" class="styled-table">
+                <thead>
+                    <tr id="table_header"></tr>
+                </thead>
+                <tbody id="table_body">
+
+                </tbody>
+            </table>
+            <table id="summary-table" class="table"></table>
+        </div>
+    </div>
+    
+    
+    <script src="src/script.js"></script>
+</body>
+</html>
